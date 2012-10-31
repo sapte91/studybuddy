@@ -9,9 +9,9 @@ Classes:
 <div data-role="footer" data-position="fixed">
 	<div data-role="navbar">
 		<ul>
-			<li><a href="/user/profile" class="ui-btn-active">Profile</a></li>
-			<li><a href="/buddies/map">BuddyMap</a></li>
-			<li><a href="/buddies/favs">Favorites</a></li>
+			<li><%= link_to 'Profile', :action => "profile", :class => "ui-btn-active" %></li>
+			<li><%= link_to 'BuddyMap', :action => "map" %></li>
+			<li><%= link_to 'Favorites', :action => "favs" %></li>
 		</ul>
 	</div>
 </div>

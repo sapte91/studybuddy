@@ -6,4 +6,12 @@ class UserController < ApplicationController
     def profile
         
     end
+
+    def favs
+
+	end
+    
+    def map
+        
+    end
 end

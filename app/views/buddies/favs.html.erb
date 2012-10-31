@@ -9,9 +9,9 @@ Favorites
 <div data-role="footer" data-position="fixed">
 	<div data-role="navbar">
 		<ul>
-			<li><a href="/user/profile">Profile</a></li>
-			<li><a href="/buddies/map">BuddyMap</a></li>
-			<li><a href="/buddies/favs" class="ui-btn-active">Favorites</a></li>
+			<li><%= link_to 'Profile', :controller => "user", :action => "profile" %></li>
+			<li><%= link_to 'BuddyMap', :controller => "buddies", :action => "map" %></li>
+			<li><%= link_to 'Favorites', :controller => "buddies", :action => "favs", :class => "ui-btn-active" %></li>
 		</ul>
 	</div>
 </div>

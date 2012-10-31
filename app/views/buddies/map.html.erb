@@ -4,9 +4,9 @@ Map Here!
 <div data-role="footer" data-position="fixed">
 	<div data-role="navbar">
 		<ul>
-			<li><a href="/user/profile">Profile</a></li>
-			<li><a href="/buddies/map" class="ui-btn-active">BuddyMap</a></li>
-			<li><a href="/buddies/favs">Favorites</a></li>
+			<li><%= link_to 'Profile', profile_user_path %></li>
+			<li><%= link_to 'BuddyMap', map_buddies_path,  :class => "ui-btn-active" %></li>
+			<li><%= link_to 'Favorites', favs_buddies_path %></li>
 		</ul>
 	</div>
 </div>
