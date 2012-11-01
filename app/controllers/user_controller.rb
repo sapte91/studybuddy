@@ -2,7 +2,7 @@ class UserController < ApplicationController
 
 
 	def login
-
+        @curr_username = "";
 	end
     
     def profile

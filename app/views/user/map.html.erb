@@ -4,9 +4,11 @@
 
 <div class="body">
 	MAP Here:
-	<div> Your Pin: <%= print @curr_user_pin %> </div>
+	<div> Your Pin: <%= @curr_user_pin %> </div>
+	<br>
+	Your Friend Pins:<br>
 	<% @friend_pins.each do |pin| %> 
-		<div> <%= print pin %> </div>
+		<div> <%= pin %> </div>
 	<% end %>
 </div>
 
