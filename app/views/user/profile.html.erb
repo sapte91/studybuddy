@@ -4,11 +4,17 @@
 </div>
 
 <div class="body">
-Classes:
-<div class="class">CS147</div>
-<div class="class">CS221</div>
-<div class="class">CS142</div>
-
+	<div class="username"> <%= @curr_user[0] %> <br/></div>
+	<div class="classes"> 
+		Classes:<br/>
+		<% @curr_user[1].each do |c| %> 
+			<div class="class"><%= c[0] %></div>
+			<div class="status"><%= c[1] %></div>
+			<div class="statesIndex"><%= c[2] %></div>
+			<br/>
+		<% end %>
+	</div>
+</div>
 
 
 <div class="navbar-test">

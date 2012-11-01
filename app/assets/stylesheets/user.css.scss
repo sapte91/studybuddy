@@ -2,11 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body,html {
+	height:100%;
+  	background: #CDCDCD;
+  	font-family: 'Hammersmith One', sans-serif;
+}
+
+a {
+	text-decoration:none;
+}
+
+div.body {
+	height: 100%;
+	padding: 50px 10px 50px 10px;
+}
+
 div.header {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 	background: -webkit-gradient(linear, left top, left bottom, from(rgb(51,153,255)), to(rgb(0,0,204)));
 	background: -moz-linear-gradient(top,rgba(51,153,255,1), rgba(0,0,204,1));
 	text-shadow: rgba(0,0,0,.4) 0 2px 0;
-	height: 40px;
 	text-align: center;
 	color: white;
 	p { vertical-align: middle;}
@@ -15,9 +33,8 @@ div.header {
 
 div.navbar-test {
 	position: fixed;
-    top: 92%;
-    bottom: 99%;
-    border: 1px solid blue;
+    top: 93%;
+    bottom: 98%;
     margin: auto;
 	width: 100%;
 	background-color: black;
@@ -25,6 +42,7 @@ div.navbar-test {
 }
 
 div.button {
+	border: 2px solid black;
 	display: inline-block;
 	height: 40px;
 	text-align: center;
@@ -38,5 +56,6 @@ div.button {
 #selected{
 	background: -webkit-gradient(linear, left top, left bottom, from(rgb(255,250,250)), to(rgb(139,137,137)));
 	background: -moz-linear-gradient(top,rgb(255,250,250), rgb(139,137,137));
-	text-shadow: rgba(0,0,0,.4) 0 2px 0;
+	text-shadow: none;
+	a {	color: navy; }
 }

@@ -1,5 +1,14 @@
-Map Here!
+<div class="header">
+	<p>StudyBuddy Map</p>
+</div>
 
+<div class="body">
+	MAP Here:
+	<div> Your Pin: <%= print @curr_user_pin %> </div>
+	<% @friend_pins.each do |pin| %> 
+		<div> <%= print pin %> </div>
+	<% end %>
+</div>
 
 <div class="navbar-test">
 	<div class="button"><%= link_to 'Profile', :action => "profile"%></div>

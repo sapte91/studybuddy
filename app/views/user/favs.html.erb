@@ -1,10 +1,23 @@
-Shilpa Apte
 
-Favorites
-<li>George</li>
-<li>Dan</li>
-<li>Someone</li>
+<div class="header">
+	<p>Your Favorite StudyBuddies</p>
+</div>
 
+<div class="body">
+	<div class="favs">
+	<% @curr_favs.each do |fav| %> 
+		<div class="username"><%= fav[0] %></div>
+		<div class="classes"> 
+		<% fav[1].each do |c| %> 
+			<div class="class"><%= c[0] %></div>
+			<div class="status"><%= c[1] %></div>
+			<div class="statesIndex"><%= c[2] %></div>
+			<br/>
+		<% end %>
+		</div>
+	<% end %>
+	</div>
+</div>
 
 <div class="navbar-test">
 	<div class="button"><%= link_to 'Profile', :action => "profile" %></div>
