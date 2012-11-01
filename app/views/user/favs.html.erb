@@ -6,12 +6,8 @@ Favorites
 <li>Someone</li>
 
 
-<div data-role="footer" data-position="fixed">
-	<div data-role="navbar">
-		<ul>
-			<li><%= link_to 'Profile', :action => "profile" %></li>
-			<li><%= link_to 'BuddyMap', :action => "map" %></li>
-			<li><%= link_to 'Favorites', :action => "favs", :class => "ui-btn-active" %></li>
-		</ul>
-	</div>
+<div class="navbar">
+	<div class="button" id="profile"><%= link_to 'Profile', :action => "profile" %></div>
+	<div class="button" id="map"><%= link_to 'BuddyMap', :action => "map" %></div>
+	<div class="button" id="favs"><%= link_to 'Favorites', :action => "favs", :class => "ui-btn-active" %></div>
 </div>

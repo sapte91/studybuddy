@@ -1,3 +1,48 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div.header {
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(51,153,255)), to(rgb(0,0,204)));
+	background: -moz-linear-gradient(top,rgba(51,153,255,1), rgba(0,0,204,1));
+	text-shadow: rgba(0,0,0,.4) 0 2px 0;
+	height: 40px;
+	text-align: center;
+	color: white;
+	p { vertical-align: middle;}
+	
+}
+
+div.navbar {
+	position: fixed;
+    top: 92%;
+    bottom: 99%;
+    border: 1px solid blue;
+    margin: auto;
+	width: 100%;
+	background-color: black;
+	a {	color: white; }
+}
+
+div.button {
+	display: inline-block;
+	height: 40px;
+	text-align: center;
+	vertical-align: 50%;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(51,153,255)), to(rgb(0,0,204)));
+	background: -moz-linear-gradient(top,rgba(51,153,255,1), rgba(0,0,204,1));
+	text-shadow: rgba(0,0,0,.4) 0 2px 0;
+}
+
+#profile {
+	width: 30%;
+}
+
+#map {
+	width: 34%;
+}
+
+#favs {
+	width: 30%;
+}
+
