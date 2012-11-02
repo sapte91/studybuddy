@@ -18,8 +18,13 @@
 <div class="header">
 	<p>StudyBuddy Map</p>
 </div>
-<div id="map_canvas" style="width:100%; height:100%"></div>
-<div class="navbar-test" style="position:absolute;bottom:0;">
+<div class="body">
+	<% if flash[:notice] %>
+  		<div class="notice"><%= flash[:notice] %></div>
+	<% end %>
+	<div id="map_canvas" style="width:100%; height:100%"></div>
+</div>
+<div class="navbar-test">
 	<div class="button"><%= link_to 'Profile', :action => "profile"%></div>
 	<div class="button" id="selected"><%= link_to 'BuddyMap', :action => "map"  %></div>
 	<div class="button"><%= link_to 'Favorites', :action => "favs" %></div>
