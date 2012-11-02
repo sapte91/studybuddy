@@ -3,14 +3,28 @@
 	<p>Your StudyBuddy Profile</p>
 </div>
 
+
 <div class="body">
-	<div class="username"> <%= @curr_user[0] %> <br/></div>
-	<div class="classes"> 
-		<% @curr_user[1].each do |c| %> 
-			<div class="class"><%= c[0] %></div>
-			<div class="status"><%= c[1] %></div>
-			<div class="statusIndex"><%= c[2] %></div>
+		<div class="username"><%= @curr_user %> <br/></div>
+		<table class="form" id="class">
+		<%= form_tag(:action => :post_profile ) do %>
+			<% classIndex = 0 %>
+			<% for c in @curr_user_classes do %>
+				<%= hidden_field_tag(:class, classIndex) %>
+				  <tr>
+				    <td colspan="2"><%= label_tag(c[0]) %></td>
+			      </tr> 
+			      <tr>
+			  	    <td colspan="2"><%= label_tag(c[1]) %></td>
+			  	  </tr>
+			  	  <tr>
+			        <td><%= text_field_tag(:status) %></td>
+			        <td><%= submit_tag("Edit Status") %></td>
+			      </tr>
+			  	<% classIndex = classIndex + 1%>
+			<% end %>			
 		<% end %>
+		</table>
 	</div>
 </div>
 

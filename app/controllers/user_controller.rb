@@ -35,7 +35,12 @@ class UserController < ApplicationController
 
     
     def profile
-        @curr_user = ["Shilpa", [["CS 147", "Meat on the Bones!", 2], ["CS 221", "No status available", 3]]]
+        @curr_user = "Shilpa"
+        @curr_user_classes = [["CS 147", "Meat on the Bones!", 2], ["CS 221", "No status available", 3]]
+    end
+
+    def post_profile
+        @curr_user_classes = [["CS 147", "Meat on the Bones!", 2], ["CS 221", "No status available", 3]]
     end
 
     def favs
