@@ -12,12 +12,6 @@
   body { height: 100%; margin: 0; padding: 0 }
   #map_canvas { height: 100% }
 </style>
-<script>
-	$.ajaxSetup ({
-	// Disable caching of AJAX responses
-	cache: false
-	});
-</script>
 </head>
 <body style="height:100%;" onload="geolocation_init()">
 	<%= yield %>

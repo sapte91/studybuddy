@@ -10,6 +10,21 @@
     };
     var map = new google.maps.Map(document.getElementById("map_canvas"),
         mapOptions);
+    var myMarker = new google.maps.Marker({
+	      position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+	      map: map,
+	      title:'Shilpa'
+  	});
+	var markerG = new google.maps.Marker({
+      position: new google.maps.LatLng(37.4225, 122.1653),
+      map: map,
+      title:'George'
+	});
+	var markerD = new google.maps.Marker({
+      position: new google.maps.LatLng(37.4419, 122.1419),
+      map: map,
+      title:'Dan'
+	});
   }
   function geolocation_init() {
   	navigator.geolocation.getCurrentPosition(initialize);
