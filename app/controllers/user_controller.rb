@@ -50,6 +50,6 @@ class UserController < ApplicationController
     
     def map
     	@curr_user_pin = ["Shilpa", 37.4419, 122.1419]
-        @friend_pins = [["George", 37.4225, 122.1653],["Dan", 37.4226, 122.1656]]
+        @friend_pins = [["George", 37.4225555, 122.1653555],["Dan", 37.4226444, 122.1656444]]
     end
 end
