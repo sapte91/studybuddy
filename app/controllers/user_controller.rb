@@ -7,7 +7,7 @@ class UserController < ApplicationController
 
     def post_login
         if params[:login] == "George" and params[:pw] == "test"
-            @curr_username = "George"
+            @curr_username = params[:login]
             redirect_to :action => 'map'
             flash[:notice] = "Welcome to StudyBuddy, " + @curr_username + "!"
         else 
