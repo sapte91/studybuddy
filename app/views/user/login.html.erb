@@ -1,3 +1,24 @@
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+
 <div id="login">
-		<%= link_to "Log in with Facebook", "/auth/facebook" %>
+<table class="form">
+	<%= form_tag(:action => :post_login ) do %>
+	  <tr>
+	    <td><%= label_tag("Username:") %></td>
+      <td><%= text_field_tag(:login) %></td>
+    </tr>  
+    <tr>
+  	  <td><%= label_tag("Password:") %></td>
+      <td><%= text_field_tag(:pw) %></td>
+    </tr>
+    <tr>
+      <td class="center" colspan="2"><%= submit_tag("Login with Facebook") %></td>
+    </tr>
+	<% end %>
+</table>
+
 </div>

@@ -2,7 +2,14 @@
 	<p>StudyBuddy Map</p>
 </div>
 
+
+
 <div class="body">
+
+	<% if flash[:notice] %>
+  		<div class="notice"><%= flash[:notice] %></div>
+	<% end %>
+
 	MAP Here:
 	<div> Your Pin: <%= @curr_user_pin %> </div>
 	<br>
