@@ -1,6 +1,22 @@
 <iframe id="geoMap" frameborder="0" scrolling="no" src="" style="width:100%;height:100%;"></iframe>
 
 <div class="navbar-test" style="position:absolute;bottom:0;">
+
+<div class="header">
+	<p>StudyBuddy Map</p>
+</div>
+
+<div class="body">
+	MAP Here:
+	<div> Your Pin: <%= @curr_user_pin %> </div>
+	<br>
+	Your Friend Pins:<br>
+	<% @friend_pins.each do |pin| %> 
+		<div> <%= pin %> </div>
+	<% end %>
+</div>
+
+<div class="navbar-test">
 	<div class="button"><%= link_to 'Profile', :action => "profile"%></div>
 	<div class="button" id="selected"><%= link_to 'BuddyMap', :action => "map"  %></div>
 	<div class="button"><%= link_to 'Favorites', :action => "favs" %></div>
