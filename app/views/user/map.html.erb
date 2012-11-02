@@ -1,22 +1,25 @@
-<iframe id="geoMap" frameborder="0" scrolling="no" src="" style="width:100%;height:100%;"></iframe>
-
-<div class="navbar-test" style="position:absolute;bottom:0;">
-
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0Vmibc9cf9KU6gZHjUJwURq6LPTyhnRo&sensor=false">
+</script>
+<script>
+  function initialize(position) {
+    var mapOptions = {
+      center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        mapOptions);
+  }
+  function geolocation_init() {
+  	navigator.geolocation.getCurrentPosition(initialize);
+  }
+</script>
 <div class="header">
 	<p>StudyBuddy Map</p>
 </div>
-
-<div class="body">
-	MAP Here:
-	<div> Your Pin: <%= @curr_user_pin %> </div>
-	<br>
-	Your Friend Pins:<br>
-	<% @friend_pins.each do |pin| %> 
-		<div> <%= pin %> </div>
-	<% end %>
-</div>
-
-<div class="navbar-test">
+<div id="map_canvas" style="width:100%; height:100%"></div>
+<div class="navbar-test" style="position:absolute;bottom:0;">
 	<div class="button"><%= link_to 'Profile', :action => "profile"%></div>
 	<div class="button" id="selected"><%= link_to 'BuddyMap', :action => "map"  %></div>
 	<div class="button"><%= link_to 'Favorites', :action => "favs" %></div>
